@@ -344,7 +344,7 @@ const App = () => {
               <div className="bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-xl border border-white/10 text-white text-left">
                 <Clock className="h-7 w-7 text-blue-400 mb-3" />
                 <h3 className="font-bold text-lg sm:text-xl mb-1">Your Time</h3>
-                <p className="text-sm text-slate-300">Drive on your schedule, not a bus timetable.</p>
+                <p className="text-sm text-slate-300">Drive on your schedule, not a bus or train timetable.</p>
               </div>
               <div className="bg-white/10 backdrop-blur-md p-5 sm:p-6 rounded-xl border border-white/10 text-white text-left">
                 <Camera className="h-7 w-7 text-blue-400 mb-3" />
@@ -378,7 +378,7 @@ const App = () => {
                 "Hi, I'm Evo. I've been professionally driving for over 8 years across the stunning landscapes of Portugal and Spain."
               </p>
               <p className="text-base md:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-                Throughout these years, I've gathered the deep local knowledge necessary to provide more than just a ride. My goal is to ensure a safe, smooth, and completely stress-free transfer experience. Along the way, I love sharing my personal restaurant recommendations and sightseeing tips to ensure you make the absolute best out of your travels in my home region.
+                Throughout these years, I've gathered the deep local knowledge necessary to provide more than just a ride. My goal is to ensure a safe, smooth, and completely stress-free transfer experience. Along the way, I love sharing recommendations and sightseeing tips to ensure you make the absolute best out of your travels in my home region.
               </p>
             </div>
 
