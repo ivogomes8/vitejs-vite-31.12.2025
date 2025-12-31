@@ -30,7 +30,7 @@ const App = () => {
   const [activeRoute, setActiveRoute] = useState(0);
 
   // --- EMAILJS & GEMINI API SETUP ---
-  const GEMINI_API_KEY = ""; 
+  const GEMINI_API_KEY = "AIzaSyABhyISI4oeXOZzTnWwhTgqRU4hGl2HUvs"; 
   const EMAILJS_SERVICE_ID = "service_kvolp4e";
   
   // 1. YOUR EXISTING AUTO-REPLY TEMPLATE (Sent to Customer)
