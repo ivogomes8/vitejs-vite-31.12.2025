@@ -440,74 +440,74 @@ const App = () => {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="pb-16 md:pb-20 bg-white w-full overflow-hidden scroll-mt-24 text-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8 md:p-12 flex flex-col lg:flex-row items-stretch gap-8 sm:gap-12 shadow-sm">
-              <div className="lg:w-1/2 flex flex-col justify-center text-left">
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-4 uppercase tracking-wider w-fit text-left">
-                  <Calculator className="w-3 h-3 mr-2" /> Fair & Transparent
-                </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">How I Calculate Quotes</h2>
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
-                  Every trip is unique. Instead of fixed prices that might overcharge you, I use a transparent formula based on distance and time. This ensures you only pay for your specific journey, including any custom sightseeing stops.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-                  <div className="flex items-center">
-                    <div className="bg-blue-600 text-white font-bold text-xl h-14 min-w-[5.5rem] px-4 rounded-xl flex items-center justify-center mr-4 shrink-0 shadow-lg shadow-blue-200/50 transition transform hover:scale-105">€1.25</div>
-                    <div className="text-left">
-                      <p className="font-bold text-slate-900 leading-none mb-1">Per Kilometer</p>
-                      <p className="text-[11px] sm:text-xs text-slate-500">Base distance traveled</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="bg-blue-600 text-white font-bold text-xl h-14 min-w-[5.5rem] px-4 rounded-xl flex items-center justify-center mr-4 shrink-0 shadow-lg shadow-blue-200/50 transition transform hover:scale-105">€20</div>
-                    <div className="text-left text-left">
-                      <p className="font-bold text-slate-900 leading-none mb-1">Per Hour</p>
-                      <p className="text-[11px] sm:text-xs text-slate-500">Driving & waiting time</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-xs text-slate-400 italic">
-                  *Final quotes may vary based on specific local parking fees or extended overnight stays for multi-day tours.
-                </p>
+      <section id="pricing" className="pb-16 md:pb-20 bg-white w-full overflow-hidden scroll-mt-24 text-left border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 flex flex-col lg:flex-row items-stretch gap-8 sm:gap-12 shadow-sm">
+            <div className="lg:w-1/2 flex flex-col justify-center">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-4 uppercase tracking-wider w-fit">
+                <Calculator className="w-3 h-3 mr-2" /> Fair & Transparent
               </div>
-              
-              <div className="lg:w-1/2 space-y-4 text-left flex flex-col">
-                <div className="bg-white rounded-xl p-6 sm:p-7 border border-slate-200 shadow-sm w-full flex-grow">
-                  <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <span className="bg-blue-100 p-1 rounded-md"><CheckCircle className="w-4 h-4 text-blue-600" /></span> What's included?
-                  </h4>
-                  <ul className="space-y-4">
-                    <li className="flex items-start text-sm text-slate-600 leading-tight">
-                      <CheckCircle size={18} className="text-green-500 mr-3 shrink-0" />
-                      <span>All Motorway Tolls, Fuel & Taxes</span>
-                    </li>
-                    <li className="flex items-start text-sm text-slate-600 leading-tight">
-                      <CheckCircle size={18} className="text-green-500 mr-3 shrink-0" />
-                      <span>Complementary Bottled Water & Wi-Fi</span>
-                    </li>
-                    <li className="flex items-start text-sm text-slate-600 leading-tight">
-                      <CheckCircle size={18} className="text-green-500 mr-3 shrink-0" />
-                      <span>Help With Luggage</span>
-                    </li>
-                    <li className="flex items-start text-sm text-slate-600 leading-tight">
-                      <CheckCircle size={18} className="text-green-500 mr-3 shrink-0" />
-                      <span>Baby Chairs (if needed)</span>
-                    </li>
-                  </ul>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">How I Calculate Quotes</h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-8">
+                Every trip is unique. Instead of fixed prices that might overcharge you, I use a transparent formula based on distance and time. This ensures you only pay for your specific journey, including any custom sightseeing stops.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div className="flex items-center">
+                  <div className="bg-blue-600 text-white font-bold text-xl h-14 min-w-[5.5rem] px-4 rounded-xl flex items-center justify-center mr-4 shrink-0 shadow-lg shadow-blue-200/50 transition transform hover:scale-105">€1.25</div>
+                  <div>
+                    <p className="font-bold text-slate-900 leading-none mb-1">Per Kilometer</p>
+                    <p className="text-[11px] sm:text-xs text-slate-500">Base distance traveled</p>
+                  </div>
                 </div>
-                
-                <div className="bg-blue-50/50 rounded-xl p-4 border border-blue-100 flex items-start gap-2">
-                  <Info size={16} className="text-blue-500 shrink-0 mt-0.5" />
-                  <p className="text-xs text-slate-600 leading-relaxed italic">
-                    Note: Attraction tickets and personal costs (such as individual meals) are not included.
-                  </p>
+                <div className="flex items-center">
+                  <div className="bg-blue-600 text-white font-bold text-xl h-14 min-w-[5.5rem] px-4 rounded-xl flex items-center justify-center mr-4 shrink-0 shadow-lg shadow-blue-200/50 transition transform hover:scale-105">€20</div>
+                  <div>
+                    <p className="font-bold text-slate-900 leading-none mb-1">Per Hour</p>
+                    <p className="text-[11px] sm:text-xs text-slate-500">Driving & waiting time</p>
+                  </div>
                 </div>
+              </div>
+              <p className="text-xs text-slate-400 italic">
+                *Final quotes may vary based on specific local parking fees or extended overnight stays for multi-day tours.
+              </p>
+            </div>
+            
+            <div className="lg:w-1/2 space-y-4">
+              <div className="bg-white rounded-xl p-6 sm:p-7 border border-slate-200 shadow-sm w-full">
+                <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <span className="bg-blue-100 p-1 rounded-md"><CheckCircle className="w-4 h-4 text-blue-600" /></span> What's included?
+                </h4>
+                <ul className="space-y-4">
+                  <li className="flex items-start text-sm text-slate-600 leading-tight">
+                    <CheckCircle size={18} className="text-green-500 mr-3 shrink-0" />
+                    <span>All Motorway Tolls, Fuel & Taxes</span>
+                  </li>
+                  <li className="flex items-start text-sm text-slate-600 leading-tight">
+                    <CheckCircle size={18} className="text-green-500 mr-3 shrink-0" />
+                    <span>Complementary Bottled Water & Wi-Fi</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 sm:p-7 border border-red-100 shadow-sm w-full">
+                <h4 className="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                  <span className="bg-red-100 p-1 rounded-md"><XCircle className="w-4 h-4 text-red-600" /></span> Not included?
+                </h4>
+                <ul className="space-y-4">
+                  <li className="flex items-start text-sm text-slate-600 leading-tight">
+                    <XCircle size={18} className="text-red-400 mr-3 shrink-0" />
+                    <span>Attraction Tickets (Monuments, Castles, etc.)</span>
+                  </li>
+                  <li className="flex items-start text-sm text-slate-600 leading-tight">
+                    <XCircle size={18} className="text-red-400 mr-3 shrink-0" />
+                    <span>Individual Meal Costs</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </section>
-
+        </div>
+      </section>
 
       {/* AI Planner */}
       <section id="planner" className="py-16 md:py-20 bg-purple-50 border-y border-purple-100 scroll-mt-24 w-full overflow-hidden text-left">
