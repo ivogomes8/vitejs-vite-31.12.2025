@@ -1,5 +1,3 @@
-import { ShieldCheck, MessageCircle, Utensils, Sparkles } from "lucide-react";
-
 import driverPhoto from "../assets/driver.jpg";
 import { ShieldCheck, MessageCircle, Utensils, Sparkles } from "lucide-react";
 
