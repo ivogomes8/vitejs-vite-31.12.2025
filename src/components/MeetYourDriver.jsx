@@ -1,5 +1,10 @@
 import driverPhoto from "../assets/driver.jpg";
-import { ShieldCheck, MessageCircle, Utensils, Sparkles } from "lucide-react";
+import {
+  MessageSquare,
+  ShieldCheck,
+  Utensils,
+  Clock,
+} from "lucide-react";
 
 export default function MeetYourDriver() {
   return (
@@ -43,24 +48,41 @@ export default function MeetYourDriver() {
           </div>
         </div>
 
-        {/* Badges */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-center">
-          <Badge icon={ShieldCheck} title="Fully Insured" />
-          <Badge icon={MessageCircle} title="English Fluency" />
-          <Badge icon={Utensils} title="Food & Sightseeing Tips" />
-          <Badge icon={Sparkles} title="Schedule Flexibility" />
+        {/* BADGES (EXACT DESIGN) */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+
+          <Badge
+            icon={MessageSquare}
+            text="English Fluency"
+          />
+
+          <Badge
+            icon={ShieldCheck}
+            text="Fully Insured"
+          />
+
+          <Badge
+            icon={Utensils}
+            text="Food & Sightseeing Tips"
+          />
+
+          <Badge
+            icon={Clock}
+            text="Schedule Flexibility"
+          />
+
         </div>
       </div>
     </section>
   );
 }
 
-function Badge({ icon: Icon, title }) {
+function Badge({ icon: Icon, text }) {
   return (
-    <div className="flex items-center justify-center gap-3 bg-slate-50 border border-slate-200 rounded-xl py-5 px-6 shadow-sm">
-      <Icon className="text-blue-600" size={22} />
-      <span className="font-semibold text-slate-800">
-        {title}
+    <div className="flex items-center px-4 py-3 rounded-xl bg-white border border-slate-200 shadow-sm transition-transform hover:-translate-y-1">
+      <Icon className="w-4 h-4 mr-2 text-blue-600 shrink-0" />
+      <span className="text-slate-800 font-bold text-xs sm:text-sm whitespace-nowrap">
+        {text}
       </span>
     </div>
   );
