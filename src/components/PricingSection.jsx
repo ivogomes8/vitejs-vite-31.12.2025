@@ -8,7 +8,7 @@ export default function PricingSection() {
         {/* Wrapper */}
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-10 lg:p-14">
 
-          <div className="grid lg:grid-cols-2 gap-14 items-start">
+          <div className="grid lg:grid-cols-2 gap-14 items-stretch">
 
             {/* LEFT */}
             <div>
@@ -60,27 +60,49 @@ export default function PricingSection() {
             </div>
 
             {/* RIGHT – WHAT'S INCLUDED */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 h-fit">
               <h3 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
                 <CheckCircle className="text-blue-600" />
                 What’s included?
               </h3>
 
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-green-500" />
-                  <span className="text-slate-700">
-                    All Motorway Tolls, Fuel & Taxes
-                  </span>
-                </li>
+              <ul className="space-y-4 text-base">
+               <li className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 shrink-0" />
+               <span className="text-slate-700">
+                All Motorway Tolls, Fuel & Taxes
+            </span>
+           </li>
 
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="text-green-500" />
-                  <span className="text-slate-700">
-                    Complementary Bottled Water & Wi-Fi
-                  </span>
-                </li>
-              </ul>
+              <li className="flex items-center gap-3">
+               <CheckCircle className="text-green-500 shrink-0" />
+              <span className="text-slate-700">
+                Complementary Bottled Water & Wi-Fi
+             </span>
+           </li>
+
+               <li className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 shrink-0" />
+              <span className="text-slate-700">
+                Help With Luggage
+             </span>
+           </li>
+
+               <li className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 shrink-0" />
+              <span className="text-slate-700">
+                24/7 Customer Support
+             </span>
+           </li>
+
+              <li className="flex items-center gap-3">
+                <CheckCircle className="text-green-500 shrink-0" />
+              <span className="text-slate-700">
+                 Baby Chairs (if needed)
+             </span>
+           </li>
+         </ul>
+
             </div>
             <p className="mt-6 text-sm italic text-slate-500">
               *Final quotes may vary based on specific local parking fees or

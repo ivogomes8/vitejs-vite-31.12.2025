@@ -4,7 +4,8 @@ import MeetYourDriver from "./components/MeetYourDriver";
 import RoutesSection from "./components/RoutesSection";
 import PricingSection from "./components/PricingSection";
 import AIPlannerSection from "./components/AIPlannerSection";
-import ContactFormSection from "./components/ContactFormSection";
+import AskDriverSection from "./components/AskDriverSection";
+import RequestQuoteSection from "./components/RequestQuoteSection";
 import Footer from "./components/Footer";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <RoutesSection />
       <PricingSection />
       <AIPlannerSection />
-      <ContactFormSection />
+      <AskDriverSection />
+      <RequestQuoteSection />
       <Footer />
     </>
   );

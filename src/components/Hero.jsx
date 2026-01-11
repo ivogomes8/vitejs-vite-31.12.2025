@@ -1,74 +1,69 @@
 import {
+  Sparkles,
+  ChevronRight,
   Clock,
   Camera,
   Users,
-  Navigation,
-  Sparkles,
-  ChevronRight,
+  Navigation
 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative h-[720px] w-full overflow-hidden">
+    <section
+      className="relative text-white overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: "url('/hero-bg.png')" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/60 md:from-slate-900/70 md:to-slate-900/40" />
 
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-bg.png')" }}
-      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-28">
+        <div className="grid gap-14 md:grid-cols-2 items-center">
 
-      {/* Dark blue overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-900/60" />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto h-full px-6 flex items-center">
-        <div className="grid lg:grid-cols-2 gap-20 items-center w-full">
-
-          {/* LEFT TEXT */}
+          {/* LEFT */}
           <div>
-            <h1 className="text-[56px] leading-[1.1] font-extrabold text-white mb-6">
+            <h1 className="text-4xl leading-tight font-extrabold md:text-6xl">
               More Than Just A <br />
-              <span className="text-[#6CB6FF]">Transfer Service.</span>
+              <span className="text-blue-400">Transfer Service.</span>
             </h1>
 
-            <p className="text-[18px] text-slate-300 max-w-xl mb-10">
-              Experience the beauty of Portugal and Spain with a local private
-              driver. Comfort, reliability, and custom sightseeing at your own
-              pace.
+            <p className="mt-5 text-base text-slate-200 md:text-lg max-w-xl">
+              Experience the beauty of Portugal and Spain with a local private driver.
+              Comfort, reliability, and custom sightseeing at your own pace.
             </p>
 
-            <div className="flex gap-4">
-              <button className=" flex items-center gap-2 bg-[#8B3DFF] hover:bg-[#7A2FE6] px-6 py-4 rounded-xl font-semibold shadow-lg transition text-white">
+            {/* CTA */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition">
                 <Sparkles size={18} />
                 Plan Your Trip
               </button>
 
-              <button className="flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] px-6 py-4 rounded-xl font-semibold shadow-lg transition text-white">
+              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition">
                 Get a Quote
                 <ChevronRight size={18} />
               </button>
             </div>
           </div>
 
-          {/* RIGHT CARDS */}
-          <div className="grid grid-cols-2 gap-6">
-            <FeatureCard
-              icon={Clock}
+          {/* RIGHT */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Feature
+              icon={<Clock size={26} />}
               title="Your Time"
               text="Drive on your schedule, not a bus or train timetable."
             />
-            <FeatureCard
-              icon={Camera}
+            <Feature
+              icon={<Camera size={26} />}
               title="Sightseeing"
               text="Custom stops at castles, villages, and viewpoints."
             />
-            <FeatureCard
-              icon={Users}
+            <Feature
+              icon={<Users size={26} />}
               title="Spacious Van"
-              text="9-Seater with air conditioning, tinted windows and huge luggage capacity."
+              text="9-seater with air conditioning and large luggage space."
             />
-            <FeatureCard
-              icon={Navigation}
+            <Feature
+              icon={<Navigation size={26} />}
               title="Door-to-Door"
               text="Stress-free pickup from your hotel or airport."
             />
@@ -80,21 +75,15 @@ export default function Hero() {
   );
 }
 
-function FeatureCard({ icon: Icon, title, text }) {
+function Feature({ icon, title, text }) {
   return (
-    <div className="bg-[#2A3443]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-xl">
-      <Icon className="text-[#6CB6FF] mb-4" size={26} />
-      <h3 className="text-[20px] font-bold text-white mb-2">
-        {title}
-      </h3>
-      <p className="text-slate-300 text-[14px] leading-relaxed">
-        {text}
-      </p>
+    <div className="bg-slate-800/80 backdrop-blur rounded-2xl p-5 md:p-6 shadow-md">
+      <div className="text-blue-400 mb-3">{icon}</div>
+      <h3 className="font-bold text-lg mb-1">{title}</h3>
+      <p className="text-sm text-slate-200">{text}</p>
     </div>
   );
 }
-
-
 
 
 
