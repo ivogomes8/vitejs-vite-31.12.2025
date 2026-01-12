@@ -52,6 +52,10 @@ export default function AIPlannerSection() {
                       <option>Algarve</option>
                       <option>Porto</option>
                       <option>Seville</option>
+                      <option>Salamanca</option>
+                      <option>Madrid</option>
+                      <option>Santiago de Compostela</option>
+                      <option>Málaga</option>
                     </select>
                   </div>
                 </div>
