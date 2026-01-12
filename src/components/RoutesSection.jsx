@@ -12,7 +12,7 @@ const routes = [
     stops: [
       "Fátima Catholic Sanctuary",
       "Obidos Medieval Town",
-      "Nazaré",
+      "Nazaré Giant Waves",
       "Batalha Monastery",
       "Coimbra University",
       "Aveiro",
@@ -25,7 +25,7 @@ const routes = [
     distance: "450km",
     description:
       "A cross-border journey from Lisbon to the heart of Andalusia.",
-    stops: ["Évora", "Monsaraz", "Mérida"],
+    stops: ["Évora Old Town", "Monsaraz Castle", "Mérida Roman Ruins"],
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const routes = [
     distance: "300km",
     description:
       "Travel south to Portugal’s sunny coast and dramatic cliffs.",
-    stops: ["Azeitão", "Palmela Castle", "Silves"],
+    stops: ["Azeitão Wine Tasting", "Palmela Castle", "Silves Castle"],
   },
 ];
 
