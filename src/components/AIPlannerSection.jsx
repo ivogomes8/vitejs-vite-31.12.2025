@@ -44,7 +44,7 @@ export default function AIPlannerSection() {
                       Start in Lisbon
                     </button>
 
-                    <button className="w-full text-left px-4 py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition">
+                    <button className="w-full text-left px-4 py-3 rounded-xl border border-purple-400 bg-purple-50 font-semibold text-purple-700">
                       End in Lisbon
                     </button>
 
