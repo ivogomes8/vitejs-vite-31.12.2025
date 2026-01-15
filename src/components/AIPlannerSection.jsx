@@ -101,9 +101,54 @@ Friendly and professional tone.
             {loading ? "Planning..." : "Get Suggestions"}
           </button>
 
-          {result && (
-            <div className="whitespace-pre-line text-slate-700 bg-slate-50 p-6 rounded-xl">
-              {result}
+            {/* LEFT FORM */}
+            <div className="p-8 lg:p-10 bg-slate-50">
+              <div className="space-y-8">
+
+                {/* Direction */}
+                <div className="bg-white rounded-2xl border border-purple-200 p-6">
+                  <p className="text-xs font-bold text-purple-600 mb-4 tracking-widest">
+                    DIRECTION
+                  </p>
+
+                  <div className="space-y-4">
+                    <button className="w-full text-left px-4 py-3 rounded-xl border border-purple-400 bg-purple-50 font-semibold text-purple-700">
+                      Start in Lisbon
+                    </button>
+
+                    <button className="w-full text-left px-4 py-3 rounded-xl border border-purple-400 bg-purple-50 font-semibold text-purple-700">
+                      End in Lisbon
+                    </button>
+
+                    <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-400">
+                      <option>Algarve</option>
+                      <option>Porto</option>
+                      <option>Seville</option>
+                      <option>Salamanca</option>
+                      <option>Madrid</option>
+                      <option>Santiago de Compostela</option>
+                      <option>Málaga</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Interests */}
+                <div>
+                  <p className="text-xs font-bold text-purple-600 mb-3 tracking-widest">
+                    YOUR INTERESTS
+                  </p>
+
+                  <textarea
+                    placeholder="I love history, wine, and small villages..."
+                    className="w-full min-h-[120px] px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none"
+                  />
+                </div>
+
+                {/* Button */}
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl shadow-lg transition">
+                  Get Suggestions
+                </button>
+              </div>
             </div>
           )}
         </div>
