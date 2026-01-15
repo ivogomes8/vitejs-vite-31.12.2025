@@ -8,6 +8,19 @@ import {
 } from "lucide-react";
 
 export default function Hero() {
+  const scrollToSection = (id) => {
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  const offset = 80; // altura do navbar
+  const position =
+    target.getBoundingClientRect().top + window.scrollY - offset;
+
+  window.scrollTo({
+    top: position,
+    behavior: "smooth",
+  });
+};
   return (
     <section
       className="relative text-white overflow-hidden bg-cover bg-center"
@@ -33,14 +46,20 @@ export default function Hero() {
 
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition">
-                <Sparkles size={18} />
-                Plan Your Trip
+              <button
+                  onClick={() => scrollToSection("planner")}
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition"
+>
+                 <Sparkles size={18} />
+                     Plan Your Trip
               </button>
 
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition">
-                Get a Quote
-                <ChevronRight size={18} />
+              <button
+                   onClick={() => scrollToSection("pricing")}
+                   className="w-full sm:w-auto flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl font-semibold shadow-lg transition"
+>
+                     Get a Quote
+                   <ChevronRight size={18} />
               </button>
             </div>
           </div>

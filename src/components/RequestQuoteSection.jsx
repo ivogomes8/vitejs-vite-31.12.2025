@@ -1,148 +1,145 @@
-import { ChevronRight, Calendar, Users } from "lucide-react";
+import { useState } from "react";
+import { Calculator } from "lucide-react";
 
-export default function RequestQuoteSection() {
+export default function RequestQuote() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    pickup: "",
+    dropoff: "",
+    date: "",
+    passengers: 1,
+    stops: false,
+  });
+
+  const BASE_KM_PRICE = 1.25;
+  const BASE_HOUR_PRICE = 20;
+  const ESTIMATED_KM = 300; // estimativa média
+  const ESTIMATED_HOURS = 3;
+
+  const extraPassengers =
+    form.passengers > 2 ? (form.passengers - 2) * 10 : 0;
+
+  const estimatedPrice =
+    ESTIMATED_KM * BASE_KM_PRICE +
+    ESTIMATED_HOURS * BASE_HOUR_PRICE +
+    extraPassengers;
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
   return (
-    <section id="quote" className="py-24 bg-slate-100">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="contact" className="py-24 bg-slate-50">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
 
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+        {/* LEFT */}
+        <div>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">
+            Request a Quote
+          </h2>
+          <p className="text-slate-600 mb-6">
+            Fill in your trip details and receive a personalized quote.
+          </p>
 
-          {/* HEADER */}
-          <div className="bg-blue-600 text-center px-6 py-10">
-            <h2 className="text-3xl font-extrabold text-white mb-2">
-              Request a Quote
-            </h2>
-            <p className="text-blue-100 max-w-xl mx-auto mb-6">
-              Ready for a custom quote? Send your travel details below and I’ll
-              get back to you shortly.
-            </p>
+          <div className="space-y-4">
+            <input
+              name="name"
+              placeholder="Full Name"
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg border"
+            />
 
-            <a
-              href="https://wa.me/351964417917"
-              target="_blank"
-              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition"
-            >
-              WhatsApp Me Directly
-            </a>
-          </div>
+            <input
+              name="email"
+              type="email"
+              placeholder="Email Address"
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg border"
+            />
 
-          {/* FORM */}
-          <form className="p-8 md:p-10 grid gap-6">
+            <input
+              name="pickup"
+              placeholder="Pickup Location"
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg border"
+            />
 
-            {/* ROW 1 */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-xs font-bold text-slate-600 mb-2">
-                  FULL NAME
-                </label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none"
-                />
-              </div>
+            <input
+              name="dropoff"
+              placeholder="Destination"
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg border"
+            />
 
-              <div>
-                <label className="block text-xs font-bold text-slate-600 mb-2">
-                  EMAIL ADDRESS
-                </label>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none"
-                />
-              </div>
-            </div>
+            <input
+              name="date"
+              type="date"
+              onChange={handleChange}
+              className="w-full p-3 rounded-lg border"
+            />
 
-            {/* ROW 2 */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-xs font-bold text-slate-600 mb-2">
-                  PICKUP LOCATION
-                </label>
-                <input
-                  type="text"
-                  placeholder="Hotel/Airport name"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-slate-600 mb-2">
-                  DESTINATION
-                </label>
-                <input
-                  type="text"
-                  placeholder="City or address"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none"
-                />
-              </div>
-            </div>
-
-            {/* ROW 3 */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-xs font-bold text-slate-600 mb-2">
-                  DATE OF TRAVEL
-                </label>
-                <div className="relative">
-                  <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                  <input
-                    type="date"
-                    className="w-full pl-11 px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold text-slate-600 mb-2">
-                  NUMBER OF PASSENGERS
-                </label>
-                <div className="relative">
-                  <Users className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                  <select className="w-full pl-11 px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <option>1 Person</option>
-                    <option>2 People</option>
-                    <option>3 People</option>
-                    <option>4+ People</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            {/* CHECKBOX */}
-            <div className="flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-xl p-4">
-              <input type="checkbox" className="mt-1" />
-              <p className="text-sm text-slate-600">
-                Interested in sightseeing stops along the way? I’ll incorporate
-                them into your personalized quote.
-              </p>
-            </div>
-
-            {/* TEXTAREA */}
+            {/* PASSENGERS */}
             <div>
-              <label className="block text-xs font-bold text-slate-600 mb-2">
-                ADDITIONAL DETAILS / QUESTIONS
+              <label className="block text-sm font-semibold mb-2">
+                Number of Passengers
               </label>
-              <textarea
-                placeholder="e.g. Traveling with several large suitcases, child seat needed, or specific sightseeing requests..."
-                className="w-full min-h-[120px] px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
-              />
+              <select
+               name="passengers"
+                value={form.passengers}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-xl border border-slate-200"
+              >
+                <option value="1">1 Person</option>
+                <option value="2">2 People</option>
+                <option value="3">3 People</option>
+                <option value="4">4 People</option>
+                <option value="5">5 People</option>
+                <option value="6">6 People</option>
+                <option value="7">7 People</option>
+             </select>
+
             </div>
 
-            {/* BUTTON */}
-            <button
-              type="submit"
-              className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2"
-            >
-              Send Quote Request
-              <ChevronRight size={18} />
-            </button>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="checkbox"
+                name="stops"
+                onChange={handleChange}
+              />
+              Interested in sightseeing stops?
+            </label>
 
-          </form>
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold">
+              Send Quote Request
+            </button>
+          </div>
         </div>
 
+        {/* RIGHT – ESTIMATE */}
+        <div className="bg-white rounded-3xl p-8 shadow-sm border">
+          <div className="flex items-center gap-3 mb-4">
+            <Calculator className="text-blue-600" />
+            <h3 className="text-xl font-bold">
+              Estimated Price
+            </h3>
+          </div>
+
+          <p className="text-4xl font-bold text-slate-900 mb-2">
+            €{Math.round(estimatedPrice)}
+          </p>
+
+          <p className="text-sm text-slate-500">
+            *Final quotes may vary based on distance, time, parking fees or
+            extended overnight stays for multi-day tours.
+          </p>
+        </div>
       </div>
     </section>
   );
 }
+

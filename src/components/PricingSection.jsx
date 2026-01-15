@@ -8,16 +8,17 @@ export default function PricingSection() {
         {/* Wrapper */}
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-10 lg:p-14">
 
+          {/* GRID PRINCIPAL */}
           <div className="grid lg:grid-cols-2 gap-14 items-stretch">
 
             {/* LEFT */}
-            <div>
-               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm">
+            <div className="flex flex-col">
+
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-blue-100 text-blue-700 font-semibold text-sm w-fit">
                 <Calculator size={16} />
                 FAIR & TRANSPARENT
               </div>
-
 
               <h2 className="text-4xl font-extrabold text-slate-900 mb-6">
                 How I Calculate Quotes
@@ -30,8 +31,8 @@ export default function PricingSection() {
                 including any custom sightseeing stops.
               </p>
 
-              {/* Price blocks */}
-              <div className="flex flex-wrap gap-6 mb-6">
+              {/* PRICE BLOCKS */}
+              <div className="flex flex-wrap gap-6 mt-auto">
                 <div className="flex items-center gap-5">
                   <div className="bg-blue-600 text-white rounded-2xl px-6 py-4 text-2xl font-extrabold">
                     €1.25
@@ -56,62 +57,67 @@ export default function PricingSection() {
                   </div>
                 </div>
               </div>
-
             </div>
 
             {/* RIGHT – WHAT'S INCLUDED */}
-            <div className="bg-white rounded-2xl border border-slate-200 p-8 h-fit">
-              <h3 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
-                <CheckCircle className="text-blue-600" />
-                What’s included?
-              </h3>
+            <div className="h-full">
+              <div className="bg-white rounded-2xl border border-slate-200 p-8 h-full flex flex-col">
 
-              <ul className="space-y-4 text-base">
-               <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 shrink-0" />
-               <span className="text-slate-700">
-                All Motorway Tolls, Fuel & Taxes
-            </span>
-           </li>
+                <h3 className="text-xl font-extrabold text-slate-900 mb-6 flex items-center gap-2">
+                  <CheckCircle className="text-blue-600" />
+                  What’s included?
+                </h3>
 
-              <li className="flex items-center gap-3">
-               <CheckCircle className="text-green-500 shrink-0" />
-              <span className="text-slate-700">
-                Complementary Bottled Water & Wi-Fi
-             </span>
-           </li>
+                {/* LISTA FLEXÍVEL */}
+                <ul className="space-y-4 text-base flex-1">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="text-green-500 shrink-0" />
+                    <span className="text-slate-700">
+                      All Motorway Tolls, Fuel & Taxes
+                    </span>
+                  </li>
 
-               <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 shrink-0" />
-              <span className="text-slate-700">
-                Help With Luggage
-             </span>
-           </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="text-green-500 shrink-0" />
+                    <span className="text-slate-700">
+                      Complementary Bottled Water & Wi-Fi
+                    </span>
+                  </li>
 
-               <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 shrink-0" />
-              <span className="text-slate-700">
-                24/7 Customer Support
-             </span>
-           </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="text-green-500 shrink-0" />
+                    <span className="text-slate-700">
+                      Help With Luggage
+                    </span>
+                  </li>
 
-              <li className="flex items-center gap-3">
-                <CheckCircle className="text-green-500 shrink-0" />
-              <span className="text-slate-700">
-                 Baby Chairs (if needed)
-             </span>
-           </li>
-         </ul>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="text-green-500 shrink-0" />
+                    <span className="text-slate-700">
+                      24/7 Customer Support
+                    </span>
+                  </li>
 
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="text-green-500 shrink-0" />
+                    <span className="text-slate-700">
+                      Baby Chairs (if needed)
+                    </span>
+                  </li>
+                </ul>
+
+                {/* NOTA FIXA NO FUNDO */}
+                <p className="mt-6 text-sm italic text-slate-500">
+                  *Final quotes may vary based on specific local parking fees or
+                  extended overnight stays for multi-day tours.
+                </p>
+              </div>
             </div>
-            <p className="mt-6 text-sm italic text-slate-500">
-              *Final quotes may vary based on specific local parking fees or
-               extended overnight stays for multi-day tours.
-            </p>
+
           </div>
         </div>
       </div>
-
     </section>
   );
 }
+
