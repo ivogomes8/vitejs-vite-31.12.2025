@@ -104,9 +104,21 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full font-semibold shadow">
-          Book Now
-        </button>
+        <button
+          onClick={() => {
+           const el = document.getElementById("contact");
+           if (el) {
+            el.scrollIntoView({
+             behavior: "smooth",
+             block: "start",
+    });
+          }
+     }}
+      className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 shadow-lg transition"
+>
+               Book Now
+         </button>
+
       </div>
     </header>
   );
